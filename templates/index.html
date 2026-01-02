@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI Prompt App</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        textarea { width: 100%; }
+        pre { background: #f4f4f4; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>OpenAI Prompt App</h1>
+    <form method="post">
+        <textarea name="prompt" rows="5" placeholder="Enter your prompt here...">{{ request.form.prompt or "" }}</textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+</body>
+</html>
