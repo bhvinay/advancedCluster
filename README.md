@@ -1,27 +1,19 @@
-# OpenAI Prompt App
+# Advanced Cluster Setup Tools
 
-A simple Flask web application that takes a user prompt, sends it to the OpenAI Chat API, and displays the response.
+This repo contains the AWS CLI wizard used to prepare IAM roles and configuration for Informatica advanced integration clusters.
 
-## Setup
+## What You Can Run
+- `wizard/` — the AWS CLI wizard (primary tool)
+- `docs/` — design notes and behavior documentation
+- `archive/` — older experiments and prior projects (kept for reference)
 
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd <repo-directory>
-   ```
-2. Create a virtual environment and install dependencies:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-3. Set your OpenAI API key as an environment variable:
-   ```bash
-   export OPENAI_API_KEY=your_api_key_here
-   ```
-4. Run the application:
-   ```bash
-   python app.py
-   ```
+## Quick Start (Wizard)
+```bash
+cd wizard
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python wizard.py --profile <profile> --region us-east-1
+```
 
-The app will be available at http://localhost:5000.
+The wizard writes a `cluster-setup.json` manifest to the current directory and prints next steps for Secure Agent EC2.

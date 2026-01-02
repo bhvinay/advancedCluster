@@ -133,13 +133,13 @@ if __name__ == "__main__":
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install boto3 click rich botocore
+pip install -r wizard/requirements.txt
 ```
 2) Ensure you are logged in: `aws sso login --profile <your-profile>` or have `AWS_PROFILE`/`AWS_ACCESS_KEY_ID` set.
-3) The CLI lives in `wizard.py`.
+3) The CLI lives in `wizard/wizard.py`.
 4) Run it (reuse-only; VPC/subnets must already exist):
 ```bash
-python wizard.py --profile <your-profile> --region us-east-1 --trusted-principal <arn> --role-specs-file roles.json
+python wizard/wizard.py --profile <your-profile> --region us-east-1 --trusted-principal <arn> --role-specs-file roles.json
 ```
 Use `--create-vpc` to allow creation when you wire that path up.
 

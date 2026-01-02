@@ -12,3 +12,5 @@ cluster-setup.json
 node_modules/
 genai/credentials
 genai/hello-world/
+archive/genai/credentials
+archive/genai/hello-world/
