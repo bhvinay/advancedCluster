@@ -1,0 +1,9 @@
+{
+  "default_key_pair": {
+    "name": "codec-ec2-6f7c44dd",
+    "path": "/Users/vhanuman/.codec/keys/codec-ec2-6f7c44dd.pem"
+  },
+  "default_instance_type": "c6i.4xlarge",
+  "default_disk_gb": 30,
+  "default_linux_version": "2023"
+}

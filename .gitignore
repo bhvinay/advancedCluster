@@ -8,6 +8,7 @@ __pycache__/
 .DS_Store
 aws_profile
 cluster-setup.json
+codec-ec2-run.json
 .claude/
 node_modules/
 genai/credentials
